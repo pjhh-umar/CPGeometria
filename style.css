@@ -102,8 +102,85 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* align-content no es necesario cuando usas flex-direction: column */
+  width: 100%;
+  /* Considera añadir min-height si necesitas un contenedor con altura mínima */
+}
+
+.resp-box {
+  display: none; /* Se mostrará con JS al hacer click */
+  width: 100%; /* Ocupará todo el ancho del links-box */
+  margin: 10px 0;
+}
+
+.flex-box {
+  display: none;
+  color: black;
+  margin: 0 auto; /* Simplifica los márgenes */
+  text-align: left;
+  /* Considera añadir un padding básico para mejor legibilidad */
+  padding: 8px 0;
+}
+
+.flex-box {
+  margin-left: 0; /* Específico para esta clase */
+}
+
+
+/* Botones */
+
+.respButton {
+  font-family: "Bitter", serif;
+  border-radius: 100px;
+  border: 2px solid rgba(52, 173, 249, 0.718);
+  background: rgb(252, 252, 244);
+  font-size: 1rem; /* Mejor usar unidades relativas */
+  width: 100%;
+  font-weight: 600;
+  padding: 8px 16px; /* Añade padding para mejor apariencia */
+  cursor: pointer; /* Indica que es clickeable */
+  transition: all 0.3s ease; /* Transición suave para todos los cambios */
+}
+
+.respButton:hover, .respButton:focus, .respButton:active {
+  background-color: rgb(238, 250, 255);
+  transform: scale(1.05); /* Efecto más sutil */
+  /* border-radius ya está definido arriba, no necesita repetirse */
+}
+.hvr-grow {
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  transition: transform 0.3s ease; /* Simplificado */
+}
+
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  transform: scale(1.05); /* Efecto más sutil */
+}
+
+.video {
+  border: 5px solid rgba(52, 173, 249, 0.718);
+  border-radius: 25px;
+  padding: 10px;
+  margin: 5px auto; /* Simplificado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  /* Considera añadir overflow:hidden si el contenido puede desbordar */
+}
+.video iframe {
+  width: 100%;
+  height: 400px; /* Altura fija o podrías usar aspect-ratio */
+  border: none;
+  display: block;
+}
+
+.video a {
+  text-decoration: none;
+  display: block; /* Mejor manejo del espacio clickeable */
   width: 100%;
 }
+
 
 .flexbox-linea {
   flex-direction: column;
@@ -492,24 +569,9 @@ h1.number-title-practica::after {
   box-shadow: 2px 2px 15px 2px rgb(31, 147, 201);  
 }
 
-.resp-box, .flex-box {
-  display: none;
-  color: black;
-  margin: 0 auto;
-  text-align: left;
-}
 
 .prop-box {
   background: rgb(255, 249, 205);
-  border: 10px solid rgba(255,102,160,0.5);
-  margin: 50px auto;
-  width: 70%;
-  box-shadow: 10px 10px 15px rgb(112, 123, 124);
-}
-
-.prop-box-dark {
-  background: rgb(33, 47, 60);
-  color: rgb(165, 105, 189);
   border: 10px solid rgba(255,102,160,0.5);
   margin: 50px auto;
   width: 70%;
@@ -558,91 +620,15 @@ h1.number-title-practica::after {
   box-shadow: 1px 1px 5px 1px rgb(31, 147, 201);
 }
 
-/* Botones */
-.temaButton {
-  display: block;
-  border: 2.5px solid rgba(255, 255, 255, 0.5);
-  background-color: rgb(255, 255, 255);
-  margin: 2.55% auto 0 auto;
-  font-size: 100%;
-}
-
-.temaButton:hover {
-  transition: background-color 0.75s ease;
-  background-color: rgb(238, 250, 255);
-  border-radius: 60px;
-  transition-duration: 10s;
-  transform: scale(1.1);
-}
-
-.respButton, .respButtonCenter {
-  font-family: "Bitter", serif;
-  border-radius: 100px;
-  border: 2px solid rgba(52, 173, 249, 0.718);
-  background: rgb(252, 252, 244);
-  font-size: 95%;
-  padding: 1%;
-  font-weight: 600;
-}
-
-.respButton {
-  margin-left: 0%;
-  margin-top: 0%;
-}
-
-.respButtonCenter {
-  text-align: center;
-  margin-left: 0%;
-  margin-top: 0%;
-}
-
-.respButton:hover, .respButton:focus, .respButton:active,
-.respButtonCenter:hover, .respButtonCenter:focus, .respButtonCenter:active {
-  transition: background-color 0.75s ease;
-  background-color: rgb(238, 250, 255);
-  border-radius: 60px;
-  transform: scale(1.1);
-  font-weight: 600;
-}
-
-.hvr-grow {
-  vertical-align: middle;
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(1, 90, 255, 0);
-  transition-duration: 0.3s;
-  transition-property: transform;
-}
-
-.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
-  transform: scale(1.1);
-}
-
-/* Multimedia */
-.video {
-  border: 5px solid rgba(52, 173, 249, 0.718);
-  border-radius: 25px;
-  padding: 10px;
-  margin: 5px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-}
 
 .imagen-box {
   border-radius: 25px;
   padding: 20px;
-  margin: auto;
-  font-size: 20px;
-  width: auto;
+  margin: 0 auto; /* Simplificado */
+  display: block; /* Asegura comportamiento consistente */
+  max-width: 100%; /* Mejor que width:auto para responsividad */
   height: auto;
-  align-content: center;
 }
-
-.video a {
-  text-decoration: none;
-}
-
 /* Tablas */
 .tabla-funciones {
   font-style: normal;
@@ -800,66 +786,7 @@ ol li::marker {
   content: " " counter(listaCounter)"."counter(sublistaCounter)"."counter(subsublistaCounter)"."counter(subsubsublistaCounter)".- ";
 }
 
-/* Diseño responsivo */
-@media screen and (max-width: 600px) {
-  .tabla_ejercicios,
-  .respuesta,
-  .respuesta-container {
-    width: 100%;
-  }
-
-  .respButton,
-  .show-all-btn {
-    width: 90%;
-  }
-}
-
 
 strong, b {
   font-weight: 600;
 }
-
-/* Container */
-
-	.container {
-		margin: 0 auto;
-		max-width: 100%;
-		width: 1200px;
-	}
-
-		@media screen and (max-width: 1680px) {
-
-			.container {
-				width: 1200px;
-			}
-
-		}
-
-		@media screen and (max-width: 1280px) {
-
-			.container {
-				width: calc(100% - 40px);
-			}
-
-		}
-
-		@media screen and (max-width: 980px) {
-
-			.container {
-				width: calc(100% - 50px);
-			}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			.container {
-				width: calc(100% - 40px);
-			}
-			.himg {
-			    display:hidden;
-	    height:40px;
-	    margin-bottom:-10px;
-	}
-
-		}
