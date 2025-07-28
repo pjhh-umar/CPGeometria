@@ -1,0 +1,658 @@
+
+<!DOCTYPE html PUBLIC >
+
+<html lang="es">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Following part is mathjax, for latex-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+
+    <!-- This part is for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <!-- This part is to load main.js -->
+    <script type="text/javascript" src="../main.js"></script>
+
+    
+
+   <!-- Next part is for new coomands -->
+   <script>
+    window.MathJax = {
+      tex: {
+        macros: {
+          sen: "\\operatorname{sen}",
+          seg: ["\\overrightarrow{#1}", 1]
+        },
+        tags: "ams" /* this part is for numbered equations */
+      }
+    };
+  </script>
+
+  <!-- This part is for using single $ for latex input, instead of \(\) -->
+  <script>
+      MathJax = {
+      tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+          },
+      svg: {
+          fontCache: 'global'
+      }
+  };
+    </script>
+
+    
+    <!-- This part restart counter of cards to start at n+1 -->
+    <style>
+      body.fondo-body{
+        counter-reset: temaCounter 1 sectionCounter;
+      }
+     
+      h1.page-title-practica{
+        counter-reset: semanaCounter 1 sectionCounter  subsectionCounter;
+      } 
+      
+
+
+    </style>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" , href="../style.css" />
+    <!-- Top Menu  -->
+    
+          
+        <header class="main-header">
+        
+          <div class="logo_superior_umar">
+          <a href="https://www.umar.mx" target="_blank"><img src="../Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+          </div>
+          <div class="contenedor_titulo">
+          <div class="title">Introducción a la Programación</div>
+          <div class="subtitle">Universidad del Mar, campus Huatulco</div>
+          <div class="subsubtitle">Licenciatura en Actuaría </div>
+          <!-- <div class="subsubtitle"><a href="https://www.umar.mx/web/ensenanza/licenciaturas/licenciatura_en_administracion_turistica" target="_blank">Licenciatura en Administración Turística</a> </div>    -->
+      
+          </div>
+          <div class="logo_superior_umar">
+            <a href="https://www.umar.mx" target="_blank"><img src="../Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+          </div>
+      
+        </header>
+
+        <nav class="top-nav">
+          <ul>
+            <li> <a href="https://pjhh-umar.github.io/CPProgramacion/Home.html"> Inicio  </a> </li>
+            <li> <a href="https://pjhh-umar.github.io/CPProgramacion/Informacion_General.html"> Información </a> </li>
+            <li> <a href="https://pjhh-umar.github.io/CPProgramacion/Notas.html"> Notas  </a> </li>
+            <li> <a href="https://pjhh-umar.github.io/CPProgramacion/Practicas.html">Prácticas</a> </li>
+            <li> <a href="https://pjhh-umar.github.io/CPProgramacion/Enlaces_externos.html"> Links </a> </li>
+          </ul>
+          </nav>
+       
+        
+        <!-- 
+          <nav class="small-nav" align=right>
+            <button onclick="myFunction()">Claro/Obscuro 
+          </nav> 
+        -->
+
+      <!-- This part is for title in tab-->
+            
+      <title>Práctica 1 </title>
+      </head>  
+
+
+
+  <body class="fondo-body" ><h1 class="page-title-practica"> Práctica 1 </h1>   
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Sean $a,b\in \mathbb{Z}$. Escribe un algoritmo para determinar el mayor y el menor de entre $a$ y $b$.</p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Sean $a,b$ y $c$  en $\mathbb{Z}$. Escribe un algoritmo para determinar el mayor y el menor de entre $a,b$ y $c$.</p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Sean $a,b$ y $c$ números enteros. Escribe un algoritmo que permita ordenar $a,b$ y $c$ de forma ascendente.</p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Sean $a,b$ y $c$ números enteros positivos. Escribe un algoritmo que permita determinar si estos forman una terna pitagórica.</p>
+      <p><b><u>Recuerda:</u></b> Una <b>terna pitagórica</b> es un conjunto de tres números enteros positivos $a,b$ y $c$ que satisfacen el teorema de 
+      Pitágoras.
+      </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Sean $a,b \in \mathbb{R}$. Escribe un algoritmo para determinar el punto medio entre $a$ y $b$</p>
+    </div>
+  
+    <div class="nota-box"><h1 class="number-title-practica">Práctica</h1>
+      <p>Sea $n \in \mathbb{N}$. Escribe un algoritmo para determinar la suma de los primeros $n$ números naturales.</p>
+      <p><b><u>Observación:</u></b> Este Práctica esta relacionado con una fórmula obtenido por Gauss. 
+        Realiza esta práctica sin utilizar la <b>fórmula de Gauss</b>.
+      </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica">Práctica</h1>
+      <p>Sea $n \in \mathbb{N}$. Escribe un algoritmo para determinar el producto de los primeros $n$ números naturales.
+      </p>
+      <p><b><u>Observación:</u></b> Este producto es llamado el <b>factorial</b> de $n$ y se denota por $n!$.</p>     
+    </div>
+    
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Escribe un algoritmo que dada la base $b$ y la altura $h$ de un rectángulo determine su área.</p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye en PSeInt el diagrama de flujo  de un algoritmo que imprima el siguiente mensaje: "Hola mundo".
+      </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el diagrama de flujo de un algoritmo que solicite al usuario que escriba su nombre,
+        e imprima un  saludo llamándolo por su nombre. Por ejemplo:
+        <center>"¡Hola Pablo!"</center></p>
+      </div>
+
+
+    <!--
+
+      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el diagrama de flujo  de un algoritmo que solicite al usuario un número entero positivo menor que
+        $1\,000$ y determine cuantas unidades, decenas y centenas tiene el número. Luego, imprima la notacion desarrollada del número, 
+        i.e. si el usuario ingresa $897$, entonces se debe imprimir la siguiente expresión:
+        $$\text{ 897=8 x 10^2 + 9 x 10^1 + 7 x 10^0}$$
+
+      </p>
+    </div>
+      
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el diagrama de flujo de un algoritmo que solicite un nombre y un apellido 
+        luego imprima el nombre y el apellido juntos (separados por un espacio). Por ejemplo:
+        <center>"Pablo Hernández"</center></p>
+       </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el diagrama de flujo de un algoritmo que solicite al usuario un número entero,
+         e imprima el número siguiente al ingresado por el usuario.
+       </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el diagrama de flujo de un algoritmo que solicite al usuario un número entero,
+         e imprima el doble y el triple del número ingresado por el usuario.
+       </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el diagrama de flujo de un algoritmo que solicite al usuario un número entero,
+         e imprima el cuadrado y el cubo del número ingresado por el usuario.
+       </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el diagrama de flujo de un algoritmo que solicite al usuario la base y la altura 
+        de un rectangulo y calcule e imprima el área y el perímetro del rectangulo mediante un mensaje apropiado.
+       </p>
+    </div>
+
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+    <p>Construye el diagrama de flujo de un algoritmo que lea cuatro números enteros y  
+    calcule e imprima la suma, producto y el promedio de estos.</p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+    <p>Construye el diagrama de flujo de un algoritmo que definiendo sólo una variable, lea un número entero, 
+    lo multiplique por $2$ y a continuación  imprima el valor resultante (el cual tiene que estar 
+    almacenado en la única variable, la original).</p>
+    </div>
+
+    
+
+    <div class="nota-box"> <h1 class="number-title-practica"> Práctica</h1>
+      Construye el diagrama de flujo de un algoritmo que lea dos números $a$ y $b$ e intercambie los valores (esto es, 
+      el valor de $a$ tiene que ser el de $b$ y viceversa) pero sin definir otra variable auxiliar.  
+    </div>
+
+  
+    <div class="nota-box"> <h1 class="number-title-practica"> Práctica</h1>
+      Construye el diagrama de flujo de un algoritmo que lea las longitudes de los catetos de un triángulo rectángulo,
+      obtenga la hipotenusa e imprima su valor. 
+      y los ángulos agudos del triángulo rectángulo a partir de las longitudes de los catetos.
+    </div>
+
+    <div class="nota-box"> <h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el diagrama de flujo de un algoritmo que solicite al usuario el número de hombres y  el 
+      número de mujeres que hay en un grupo. Luego, determine e imprima el porcentaje de hombres y 
+      mujeres que hay en el grupo.
+    </p>
+    </div>
+  -->
+
+    <!--
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+        <p>Construye el diagrama de flujo de un algoritmo que solicite al usuario un número entero,
+          y determine e imprima si este es divisible entre $7$ y mayor que $40$.
+         </p>
+    </div>
+    
+      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el diagrama de flujo de un algoritmo que reciba un número real introducido por el usuario 
+        y determine si este es se encuentra entre $-1$ y $1$. i.e. si el número se encuentra en el intervalo $(-1,1)$,
+        de ser así imprima "VERDADERO", de lo contrario imprima "FALSO".
+      </p>
+    </div> 
+
+     <div class="nota-box">
+          <h1 class="number-title-practica"> Práctica</h1>
+          <p>Construye el diagrama de flujo  de un algoritmo  que solicite al usuario un número real $r$.
+            Luego, si el número ingresado es mayor que cero, calcular e imprimir  el perímetro de 
+            la circunferencia cuyo radio es $r$.
+          </p>
+         </div>
+
+          <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+            <p>Construye el diagrama de flujo  de un algoritmo  que solicite al usuario dos números reales y 
+              determine e imprima el mayor de ellos, si ambos números son iguales imprimir el mensaje "Los 
+              números son iguales". 
+            </p>
+          </div>
+
+    -->
+
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye en PSeInt el diagrama de flujo de un algoritmo que solicite al usuario un número entero $n$
+        y determine e imprima si $n$ es un número par o impar.
+      </p>
+      <p><b>Recordatorio:</b> Se dice que un número entero es par si es divisible entre $2$ e impar en 
+        caso contrario. </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye en PSeInt el diagrama de flujo  de un algoritmo que lea dos números enteros, 
+        calcule e imprime mediante un mensaje adecuado la suma, resta y multiplicación de dichos números.</p>
+    </div>
+
+    
+    <!-- <div class="nota-box">
+      <h1 class="number-title-practica"> Práctica</h1>
+    <p>Construye el diagrama de flujo de un algoritmo que solicite al usuario ingresar un número real 
+      y determine si este es positivo, en caso afirmativo  imprima "El número es positivo", de lo 
+      contrario imprima "El número es positivo".
+
+    </p>
+    </div> -->
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye en PSeInt el diagrama de flujo de un algoritmo que solicite al usuario un número entero $n$
+        y determine e imprima si $n$ es positivo, negativo o cero.
+      </p>
+     
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye en PSeInt el diagrama de flujo de un algoritmo que solicite al usuario  un número entero $n$
+        y determine e imprima si $n$ es multiplo de $5$.
+      </p>
+      <p><b>Recordatorio:</b> Sean $n,n_{0} \in \mathbb{Z}$ números enteros. Se dice que $n$ es multiplo de $n_{0}$ 
+        si existe $k \in \mathbb{Z}$ tal que $n = k \cdot n_{0}$.
+      </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye en PSeInt el diagrama de flujo de un algoritmo que solicite al usuario  dos números enteros $n,m$
+        y determine e imprima si uno de ellos es multiplo del otro.
+      </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye en PSeInt el diagrama de flujo  de un algoritmo  que solicite al usuario la base y  altura de
+        un rectángulo y calcule e imprima el área del respectivo rectángulo.</p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye en PSeInt el diagrama de flujo  de un algoritmo  que solicite al usuario la base y  altura
+        (por el momento asume que la base y la altura son números enteros) de
+        un rectángulo y calcule e imprima el perímetro del respectivo rectángulo.</p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye en PSeInt el diagrama de flujo de un algoritmo que solicite al usuario tres números enteros 
+        e imprima el menor y el mayor de los tres números. Si los tres números son iguales imprima un mensaje 
+        adecuado indicando esto.
+      </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye en PSeInt el diagrama de flujo de un algoritmo que solicite al usuario tres números enteros $a,b,c$ 
+        y determine e imprime la media aritmética de estos. 
+      </p>
+    </div>
+
+
+    <!-- <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye en PSeInt el diagrama de flujo de un algoritmo que solicite al usuario dos números enteros $n,m$ y determina
+        e imprima la media geométrica de $m$ y $n$. 
+      </p>
+    </div> -->
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye en PSeInt el diagrama de flujo de un algoritmo que solicite al usuario un número entero positivo $n$ y 
+        utiliza la fórmula de Gauss para determinar e imprimir la suma de los primeros $n$ números positivos.
+      </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye en PSeInt el diagrama de flujo de un algoritmo que solicite al usuario tres números enteros 
+        e imprime el menor y el mayor de los tres números. Si los tres números son iguales imprima un mensaje 
+        adecuado indicando esto.
+      </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye en PSeInt el diagrama de flujo de un algoritmo que solicite al usuario que ingrese su edad 
+        e imprime si el usuario es menor o mayor de edad. 
+      </p>
+    </div>
+
+    <!-- 
+    <div class="nota-box"><h1 class="number-title-practica">  Ejercicio</h2>
+          <p>Construye el diagrama de flujo de un algoritmo que solicite al usuario tres números enteros, validar
+            que en efecto se trata de números distintos, de no ser así terminar el algoritmo inmeditamente, en
+            caso de ser numeros distintos imprimir el  mayor de ellos.
+          </p>
+          </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica"> Práctica</h1>
+    <p>Construye el diagrama de flujo de un algoritmo que solicite la edad del usuario 
+      y determine si este es mayor de edad, en caso afirmativo imprima "Mayor de edad", de lo 
+      contrario imprima "Menor de edad".
+    </p>
+
+    
+        <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+          <p>Construye el diagrama de flujo de un algoritmo que lea tres números enteros y los imprima 
+            en orden ascendente.
+          </p>
+        </div>
+    </div> -->
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye en PSeInt el diagrama de flujo de un algoritmo que solicite al usuario un número entero $a$ 
+        y un número entero positivo $a$, e imprima la potencia $a^{n}$
+      </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye en PSeInt el diagrama de flujo de un algoritmo que solicite al usuario un número entero $n$ 
+        e imprima el valor absoluto de $n$.
+      </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye en PSeInt el diagrama de flujo de un algoritmo que solicite al usuaro  ingresar  el precio de un producto, y le aplique un descuento del  del $5\%$ sobre su costo original. Imprima el precio final del producto. 
+      </p>
+    </div>
+
+
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el diagrama de flujo  de un algoritmo  que lea la base y la altura de un rectángulo y
+        calcule e imprima su área</p>
+      <!-- <button class="respButton hvr-grow ">  Solución       </button>
+          <div class="resp-box flexbox">
+            <div class="flexbox">  
+              <ol>
+              <li>Inicio</li>
+              <li></li>
+              <li>Fin</li>
+              </ol>
+            </div>
+          </div> -->
+    </div>
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el diagrama de flujo  de un algoritmo que lea dos números reales, 
+        calcule la suma, resta y multiplicación de dichos  números.</p>
+      <!-- <button class="respButton hvr-grow ">  Solución       </button>
+          <div class="resp-box flexbox">
+            <div class="flexbox">  
+              <ol>
+              <li>Inicio</li>
+              <li></li>
+              <li>Fin</li>
+              </ol>
+            </div>
+          </div> -->
+    </div>
+
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el diagrama de flujo de un algoritmo que lea una cantidad en dólares estadounidenses,
+        y convierta esa cantidad a pesos mexicanos.  Imprima el resultado.
+      </p>
+      <p><b>Observación</b> Considera el siguiente tipo de cambio: </p>
+        <center><p>$1$ dólar estadounidense= $\$20.15$ pesos mexicanos.</p></center>  
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el diagrama de flujo de un algoritmo que solicite al usuaro  ingresar  el precio de un producto, y le aplique un impuesto del  $10\%$ de su costo original. Imprima el precio final del producto. 
+      </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el diagrama de flujo de un algoritmo que solicite al usuaro  ingresar  el precio de un producto, y le aplique un descuento del  del $5\%$ sobre su costo original. Imprima el precio final del producto. 
+      </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p> Construye el diagrama de flujo de un algoritmo que solicite al usuaro  ingresar  el precio de un producto, y le aplique un impuesto del  $15\%$ de su costo original en caso de que su precio sea menor que $\$ 2\,500$ pesos. Imprima el precio final del producto. 
+      </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el diagrama de flujo de un algoritmo que lea un número de dias (dias completos) y 
+        calcule e imprima el número de segundos que hay en el número de días dado.
+      </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye un diagrama de flujo de un algoritmo que solicite al usuaro  ingresar  
+        una cantidad de segundos (número real)  introducida por teclado  e imprima su equivalente en semanas, días, horas, minutos y segundos.</p>        
+      </div>
+    
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el diagrama de flujo de un algoritmo que solicite al usuaro  ingresar   la longitud 
+        de un objeto expresados en pies,determine e imprima la longitud del objeto  en metros.</p>
+        
+      <p><b>Observación</b> Considera que: </p>
+        <center><p>$1$ pie =  $0.09290$ metros.</p></center>    
+      </div>
+      
+
+      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+        <p>Construye en PSeInt el diagrama de flujo de un algoritmo que lea una cantidad en dólares estadounidenses,
+          y convierta esa cantidad a pesos mexicanos.  Imprima el resultado.
+        </p>
+        <p><b>Observación</b> Considera el siguiente tipo de cambio: </p>
+          <center><p>$1$ dólar estadounidense= $\$20.15$ pesos mexicanos.</p></center>  
+      </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el diagrama de flujo de un algoritmo que solicite al usuaro  ingresar   el peso
+        de un objeto expresados en libras, determine e imprima la longitud del objeto en kilogramos.</p>
+        
+      <p><b>Observación</b> Considera que: </p>
+        <center><p>Una libra  =  $0.45359$ kilogramos.</p></center>    
+      </div>
+
+
+    
+
+      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+        <p>Construye en PSeInt el diagrama de flujo de un algoritmo que solicite al usuaro  ingresar   la longitud 
+          de un objeto expresados en pies,determine e imprima la longitud del objeto  en metros.</p>
+          
+        <p><b>Observación</b> Considera que: </p>
+          <center><p>$1$ pie =  $0.09290$ metros.</p></center>    
+        </div>
+  
+
+      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+        <p>Construye el diagrama de flujo  de un algoritmo que  solicite el costo de un artículo
+          y la cantidad de dinero entregada por el cliente, calcule e imprima el cambio que
+          se debe entregar al cliente. Manda un mensaje apropiado en caso de que la cantidad de dinero entregada
+          por el usuario sea menor que el costo del artículo.
+        </p>
+      </div>
+
+      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+        <p>Construye el diagrama de flujo de un algoritmo que solicite al usuario ingresar un número entero
+          de cuatro dígitos, y genere una impresión como la que se muestra a continuación: 
+          por ejemplo el número ingresado es $6352$, se debe imprimir:<br>
+            <center>
+            $6$<br>
+            $3$<br>
+            $5$<br>
+            $2$
+          </center>
+        </p>
+      </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el diagrama de flujo de un algoritmo que solicite al usuario ingresar el radio de una esfera, luego 
+        calcule e imprime mediante un mensaje adecuado el área de la superficie y volumen de la esfera correspondiente.
+      </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Utilizando sólo una condición if construye el diagrama de flujo de un algoritmo que solicite al usuario dos números reales.
+      Si exactamente uno de ellos  es negativo, "invierte" el signo de este y calcula e imprime la suma 
+      de ambos números. De otro forma, hacer nada.
+      </p>
+    </div>
+         
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p> Construye el diagrama de flujo  de un algoritmo  que solicite al usuario el nombre de un alumno del
+        SUNEO (No del curso Propedeútico), luego  solicita las calificaciones de los tres examenes parciales y 
+        del examen ordinario, entonces calcula su promedio  final e imprime 
+        "Felicidades [nombre_estudiante] aprobaste el curso con una calificación de [calificacion_alumno]" 
+        en caso de que su calificación final sea mayor o igual que $6$  en caso contrario imprime "Lo siento [nombre_estudiante] 
+        reprobaste el curso :(" . En este último caso  pregunta si desea conocer su calificación final, y si la respuesta es 
+        afirmativa imprime su calificación con un mensaje apropiado para motivar al estudiante ;).
+      </p>
+      <p><b>Recuerda:</b> En el <b>SUNEO</b>, el promedio de las calificaciones obtenidas en cada parcial equivale a la mitad
+        de tu calificacion final y la calificación obtenida en el examen ordinario determina la otra mitad
+       de la calificación final de un curso.
+     </p>
+    </div> 
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el diagrama de flujo de un algoritmo que solicite al usuario  un  número entero y determine e imprima 
+        si este es o no un numero de exactamente $4$ dígitos.
+      </p>
+    </div>
+    
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el diagrama de flujo de un algoritmo que solicite al usuario  un  número entero $n$ menor o igual $1000$ y 
+        determine e imprima cuantos dígitos tiene $n$.
+      </p>
+    </div>
+      
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el  diagrama de flujo de un algoritmo que  solicite al usuario un 
+        número entero positivo $n \in \{1,2,3,4,5,6,7\}$. Luego, imprime el nombre del día de la semana correspondiente. 
+        Asume que $1$ corresponde a "Domingo" y $7$ a "Sabado", si el número ingresado no pertenece al conjunto
+        $\{1,2,3,4,5,6,7\}$ imprimir el mensaje "El número ingresado no corresponde a un día de la semana" 
+      </p>       
+    </div>
+
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Construye el  diagrama de flujo de un algoritmo que  solicite al usuario un 
+        número entero $n \in \mathbb{N}$ y determine la clase de <a href="https://es.wikipedia.org/wiki/Aritmética_modular" target="_blank">  equivalencia módulo $7$</a> (Vea también <a href="https://es.wikipedia.org/wiki/Congruencia_(teoría_de_números)" target="_blank"> relación de  congruencia</a>) 
+        a la que pertenece, imprime la clase con letra.
+      </p>       
+    </div>
+     
+        <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+          <p>Construye el  diagrama de flujo de un algoritmo que solicite al usuario dos números 
+            enteros $x,y$, calcule e imprima  el valor de la función $f(x,y)$ bajo  la 
+            siguiente regla de correspondencia:
+              \begin{equation}f(x,y) :=
+              \begin{cases}
+              100x,&  \text{ si } y=1, \\
+              100^x,& \text{ si } y=2,  \\
+              x/100,& \text{ si } y=3, \\
+              0    ,&  \text{ para cualquier otro valor de } y \\
+              \end{cases} 
+              \end{equation}
+          </p>
+          <p>Imprimir "$f(x,y)= \text{valor_resultante}$"</p>
+        </div>
+    
+    
+        <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+          <p>Construye el  diagrama de flujo de un algoritmo que  solicite el salario de un profesor del SUNEO,
+            calcule el incremento del salario de acuerdo con el siguiente criterio e imprima el nuevo salario
+            del profesor.
+            \begin{equation}
+            \begin{cases}
+            Salario < \$12\,000,&  \text{ Incremento del } 15\%. \\
+            \$12\,000 \leq Salario < \$15\,000,& \text{ incremento del } 12\%. \\
+            \$15\,000 \leq Salario < $18\,000,& \text{ incremento del } 8\%. \\
+            $18\,000  \leq  Salario,&  \text{ incremento del } 5\%.\\
+            \end{cases} 
+            \end{equation}
+          </p>       
+        </div>
+    
+       
+          
+        <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+          <p>Construye el diagrama de flujo  de un algoritmo  que reciba los coeficientes $a,b,c$ de una ecuación cuadratica: 
+            $ax^2 + bx +c$ y determine e imprima si tiene si tiene dos soluciones reales, sólo una solución real o bien 
+            ninguna solución real. En los dos primeros casos imprimir las raices reales de la ecuación.
+          </p>
+          <p><b>Hint:</b> Utiliza el discrminante de la ecuación cuadrática. </p>
+        </div> 
+    
+        <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+            <p> En la compañía telefónica “chismefón”. Cuando
+              se realiza una llamada, el cobro es por el tiempo que ésta dura, de tal
+              forma que los primeros cinco minutos cuestan $\$1.00$ cada minuto, los siguientes
+              tres, $\$80$ centavos cada minuto, los siguientes dos minutos, $\$70$ centavos 
+              cada uno, y despues del décimo minuto, $\$50$ centavos cada minuto.
+            </p>
+        
+          <p>Además, se aplica un impuesto del  $15\%$  sobre el monto a pagar por la duración de la llamada cuando esta es
+            realizada en domingo, mientras que cualquier otro día de la semana el impuesto se calcula de la siguiente manera:
+            En turno matutino, se aplica un impuesto del $5\%$, y en turno vespertino del $10\%$ sobre el monto a pagar por 
+            la duración de la llamada. 
+            
+          </p>
+          
+          <p>Construye el diagrama de flujo 
+            de un algoritmo que solicite al usuario el número de minutos que duro la llamada, el día que se realizo 
+            y cuando corresponda si esta fue realizada durante el turno matutino o vespertino, luego determina e imprime 
+            el total que debe pagar el cliente.
+          </p>
+        </div>  
+
+        
+    <!-- <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Escriba el  pseudocodigo  de un algoritmo  que imprima la suma de los primeros $100$ números 
+        naturales.
+      </p>
+    </div>
+      -->
+ 
+</body>

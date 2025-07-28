@@ -1,0 +1,242 @@
+
+<!DOCTYPE html PUBLIC >
+
+<html lang="es">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Following part is mathjax, for latex-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+
+    <!-- This part is for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <!-- This part is to load main.js -->
+    <script type="text/javascript" src="../main.js"></script>
+
+    
+
+
+    <!-- Next part is for new coomands -->
+    <script>
+      window.MathJax = {
+        tex: {
+          macros: {
+            sen: "\\operatorname{sen}",
+            seg: ["\\overrightarrow{#1}", 1]
+          },
+          tags: "ams" /* this part is for numbered equations */
+        }
+      };
+    </script>
+
+    
+    <!-- This part is for using single $ for latex input, instead of \(\) -->
+    <script>
+        MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+    </script>
+
+    
+    <!-- This part restart counter of cards to start at n+1 -->
+    <style>
+      /* body.number-title
+      {
+      counter-reset: temaCounter 1 subsectioncounter ;
+      } */
+      body.fondo-body{
+        counter-reset: temaCounter 6;
+      }
+
+      /* h1.page-number-title
+      {
+      counter-reset: sectionCounter 0;
+      }  */
+
+      h1.tema-number-title
+          {
+          counter-reset: sectionCounter 0 subsectionCounter 0;
+          } 
+
+      h1.number-title
+      {
+      counter-reset: subsectionCounter;
+      /* counter-reset: subsectionCounter; */
+      }
+
+    </style>
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" , href="../style.css" />
+    <!-- Top Menu  -->
+    
+          
+        <header class="main-header">
+        
+          <div class="logo_superior_umar">
+          <a href="https://www.umar.mx" target="_blank"><img src="../Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+          </div>
+          <div class="contenedor_titulo">
+          <div class="title">Introducción a la Programación</div>
+          <div class="subtitle">Universidad del Mar, campus Huatulco</div>
+          <div class="subsubtitle">Licenciatura en Actuaría </div>
+          <!-- <div class="subsubtitle"><a href="https://www.umar.mx/web/ensenanza/licenciaturas/licenciatura_en_administracion_turistica" target="_blank">Licenciatura en Administración Turística</a> </div>    -->
+          </div>
+          <div class="logo_superior_umar">
+            <a href="https://www.umar.mx" target="_blank"><img src="../Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+          </div>
+
+      
+        </header>
+
+        <nav class="top-nav">
+          <ul>
+            <li> <a href="https://pjhh-umar.github.io/CPProgramacion/Home.html"> Inicio  </a> </li>
+            <li> <a href="https://pjhh-umar.github.io/CPProgramacion/Informacion_General.html"> Información </a> </li>
+            <li> <a href="https://pjhh-umar.github.io/CPProgramacion/Notas.html"> Notas  </a> </li>
+            <li> <a href="https://pjhh-umar.github.io/CPProgramacion/Practicas.html"> Prácticas</a> </li>
+            <li> <a href="https://pjhh-umar.github.io/CPProgramacion/Enlaces_externos.html"> Links </a> </li>
+          </ul>
+          </nav>
+       
+        
+        <!-- 
+          <nav class="small-nav" align=right>
+            <button onclick="myFunction()">Claro/Obscuro 
+          </nav> 
+        -->
+
+      <!-- This part is for title in tab-->
+            
+      <title>Semana 4</title>
+      </head>  
+
+      <body class="fondo-body" ><h1 class="page-number-title"> Semana 4 </h1>
+      
+    <h1 class="tema-number-title"> Estructuras de control</h1>
+    <div class="nota-box"><h1 class="title"> Introducción</h1>
+      <p>En un principio la mayoría de los algoritmos definidos se ejecutan de manera <b>secuencial</b>, 
+        es decir, una sentencia después de otra. La ejecución comienza con la primera sentencia del algoritmo 
+        y prosigue hasta la última sentencia, cada una de las cuales se ejecuta una sola vez.
+      </p> 
+
+      
+
+      <p>Este modo se caracteriza porque una acción se ejecuta detrás de otra. El flujo del programa 
+        coincide con el orden en el que se encuentran las instrucciones. Aquí podemos
+        encontrar operaciones de <em>inicio/fin, declaración de variables, asignación de variables, operaciones,
+        etc</em>. Este tipo de estructura se basa en las etapas que constituyen un algoritmo o programa:
+        <ul>
+          <li>Declaración de variables.</li>
+          <li>Inicialización de variables/lectura de datos.</li>
+          <li>Operaciones.</li>
+          <li>Salida.</li>
+        </ul>
+      </p>
+     
+      <p>Esta forma de programación es adecuada para resolver problemas sencillos. Sin embargo, para la 
+        resolución de problemas de más complejos es necesario poder <b>controlar cuáles son las sentencias 
+        que se ejecutan y en qué momentos</b>. 
+      </p>
+
+      <p>Las <b>estructuras de control</b> controlan el flujo de ejecución de un programa o función.
+        Las instrucciones o sentencias se organizan en tres tipos de estructuras de control 
+        que sirven para controlar el flujo de la ejecución: <em><b>secuencial</b>, <b>selección (decisión)</b> y 
+        <b>repetición</b></em>.
+      </p>
+    </div>
+    <h1 class="tema-number-title"> Estructuras de selección: Sentencias <em>if</em> y <emp>switch</emp></h1>  
+     
+    <div class="nota-box"><h1 class="title"> Introducción</h1>
+      <p>Consideraremos las estructuras selectivas o condicionales: sentencias <em>if</em> y <em>switch</em>, que controlan
+      si una sentencia o lista de sentencias se ejecutan en función del cumplimiento o no de una condición.
+      </p>
+     </div>
+      
+      <div class="nota-box"><h1 class="number-title"> Estructura condicional <em>if</em></h1>
+
+      <p>En general, la sintaxis de la sentencia <em>if</em> es:</p>
+
+      <p>
+        <div class="flexbox">
+            <img src="../Imagenes/Sintaxis_Sentencia_If.png" alt="", width="70%" height="auto">
+        </div>
+      </p>
+
+      <p>Enseguida se presenta un ejemplo más especifico sobre el uso de la sentencia <em>if</em> :</p>
+      <h2 class="title"> Ejemplo</h2>
+      <p>
+        <div class="flexbox">
+            <img src="../Imagenes/Sentencia_If_.png" alt="", width="70%" height="auto">
+        </div>
+      </p>
+     </div>
+
+     <div class="nota-box"><h1 class="number-title"> Estructura condicional <em>Según</em> (<em>switch</em>)</h1>
+      <p>La estructura condicional <em>if</em> nos proporciona, únicamente dos resultados,
+        uno para cuando es verdadero y otro para cuando es falso. La estructura <em>según</em>,
+        por su parte nos permite elegir entre muchas opciones.</p>
+     </div>
+        
+      <div class="nota-box"><h2 class="number-title"> Características</h2>
+        <ol>
+          <li>Esta estructura nos permite ejecutar una de entre un conjunto de alternativas,
+            con base en el valor almacenado en una <b>variable de tipo númerico</b> 
+            llamada <b><em>selector</em></b>.</li>
+          <li>No tiene sentido usar un selector para una variable como por ejemplo sexo ($1$; hombre, $2$: Mujer),
+            en este caso es más óptimo y eficiente la estructura selectiva $if$ pero para una variable como 
+            carrera (1: 'Economía', 2: 'Turismo'. 3: 'Comunicación', 4:'Relaciones internacionales', 5: 'Actuaria') 
+            es más recomendable  usar un selector.</li>
+          <li>El selector debe ser una variable que toma más de dos valores  enteros $1, 2, 3 ,\ldots N$ y
+            dependiendo de ese valor se ejecute ciertas instrucciones. 
+          </li>
+          <li>Se evalua el contenido del <em>selector</em> y se ejecuta la secuencia de instrucciones asociadas 
+            con dicho valor. </li>
+          <li>La secuencia de instrucciones ejecutada por una instrucción <em>Según</em> depende del valor de
+            una variable numérica.</li>
+          <li>Cada opción está formada por uno o más números separados por comas.</li>
+          <li>Opcionalmente, se puede agregar una opción final, llamada <b><em>De otro modo</em></b>, cuya secuencia 
+            de instrucciones asociada se ejecutara sólo si el valor almacenado en la variable no coincide 
+            con ninguna de las opciones anteriores.</li>
+        </ol>
+      </div>
+
+      <div class="nota-box"><h2 class="number-title"> Sintaxis sentencia <em>según</em></h2>
+
+      <p>En general, la sintaxis de la sentencia <em>según</em> es:</p>
+
+      <p>
+        <div class="flexbox">
+            <img src="../Imagenes/estructura_segun_general.png" alt="", width="70%" height="auto">
+        </div>
+      </p>
+
+      <p>Donde <b><em>selector</em> es una variable de tipo númerico</b> y $n_1,n_2,n_3,n_4,n_5, n_6$ son 
+        valores que toma la variable <em>selector</em>
+      </p>
+
+      <p>Enseguida se presenta un ejemplo más especifico sobre el uso de la sentencia <em>según</em> :</p>
+      
+      <h2 class="title"> Ejemplo</h2>
+      <p>
+        <div class="flexbox">
+          <img src="../Imagenes/estructura_segun.png" alt="", width="70%" height="auto">
+        </div>
+      </p>
+     </div>
+
+         
+
+
+
+ 
+    </body>
